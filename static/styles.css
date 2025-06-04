@@ -28,6 +28,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.8);
     overflow: hidden;
     transition: transform 0.3s ease;
+    margin-bottom: 40px;
 }
 
 .unified-card:hover {
@@ -37,7 +38,7 @@ body {
 
 .header-section {
     text-align: center;
-    padding: 40px 40px 20px 40px;
+    padding: 40px 40px 60px 40px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
 }
@@ -56,7 +57,7 @@ body {
     border-radius: 50%;
     border: 6px solid white;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    margin: -60px auto 30px auto;
+    margin: 20px auto 30px auto;
     display: block;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -85,7 +86,7 @@ body {
     color: white;
     padding: 30px;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
 
 .intro-section h2 {
@@ -95,21 +96,36 @@ body {
     margin-bottom: 15px;
 }
 
-.section h2 {
+.section-title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6em;
     font-weight: 600;
     color: #2c3e50;
-    margin-bottom: 25px;
+    margin: 40px 0 20px 0;
     padding-bottom: 10px;
     border-bottom: 3px solid #3498db;
     display: inline-block;
 }
 
+.info-card, .video-card, .tech-card, .search-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover, .video-card:hover, .tech-card:hover, .search-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 .info-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 0;
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -174,13 +190,19 @@ body {
     color: #8e44ad;
 }
 
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 .tech-stack {
     background: white;
     color: #2c3e50;
     padding: 12px 20px;
     border-radius: 25px;
     display: inline-block;
-    margin: 6px;
     font-size: 0.9em;
     font-weight: 500;
     border: 2px solid #ecf0f1;
@@ -253,20 +275,12 @@ body {
     color: white;
 }
 
-.video-section {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 15px;
-    margin: 30px 0;
-    border: 1px solid #e9ecef;
-}
-
 .video-container {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -281,19 +295,8 @@ body {
     border-radius: 12px;
 }
 
-.search-section {
+.search-card {
     text-align: center;
-    padding: 30px 0;
-    border-top: 2px solid #ecf0f1;
-    margin-top: 40px;
-}
-
-.search-section h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #2c3e50;
-    margin-bottom: 25px;
-    font-weight: 600;
-    font-size: 1.4em;
 }
 
 .search-links {
@@ -301,6 +304,7 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .search-link {
@@ -350,6 +354,10 @@ body {
         padding: 25px;
     }
     
+    .info-card, .video-card, .tech-card, .search-card {
+        padding: 20px;
+    }
+    
     .search-links {
         gap: 15px;
     }
@@ -360,18 +368,18 @@ body {
     }
     
     .tech-stack {
-        margin: 4px;
         padding: 10px 16px;
         font-size: 0.85em;
     }
     
-    .section {
-        margin-bottom: 30px;
+    .section-title {
+        font-size: 1.4em;
+        margin: 30px 0 15px 0;
     }
     
     .profile-image {
         width: 150px;
         height: 150px;
-        margin: -45px auto 30px auto;
+        margin: 15px auto 25px auto;
     }
 } 
